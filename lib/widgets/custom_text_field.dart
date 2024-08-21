@@ -1,0 +1,21 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+class CustomTextField extends StatelessWidget {
+  CustomTextField({super.key,this.hintText});
+
+  String? hintText;
+  @override
+  Widget build(BuildContext context) {
+    return  TextField(
+      decoration:InputDecoration(
+        hintText: hintText,
+        hintStyle: TextStyle(color: Colors.white),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: Colors.white), // Change border color
+        ),
+
+      ) ,
+    );
+  }
+}
